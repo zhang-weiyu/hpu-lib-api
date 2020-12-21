@@ -5,8 +5,6 @@
 @Software  : VSCode
 """
 
-# -*- coding: utf-8 -*-
-
 import requests
 from datetime import date, timedelta
 
@@ -45,11 +43,9 @@ def main():
         })
 
     if res.status_code == 200:
-        print('login success')
-        print(res.text)
-        res1 = res.json()
+        res = res.json()
         print(res)
-        token = res1['data']['token']
+        token = res['data']['token']
         info = freeBook(token)
         print(info)
 
