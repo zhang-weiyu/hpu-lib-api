@@ -36,12 +36,13 @@ def freeBook(token: str):
 
 def main():
     url = 'http://seatlib.hpu.edu.cn/rest/auth'
-    res = requests.get(url=url,
-                       headers=headers,
-                       params={
-                           'username': '311702010323',
-                           'password': 'sangJS1122'
-                       })
+    res = requests.get(
+        url=url,
+        headers=headers,
+        params={
+            'username': '',  # 此处填写学号
+            'password': ''  # 此处填写图书馆密码
+        })
 
     if res.status_code == 200:
         print('login success')
